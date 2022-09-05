@@ -1,0 +1,48 @@
+﻿
+
+@{
+    ViewBag.Title = "checkout";
+    Layout = "~/Views/Shared/Layout1.cshtml";
+}
+
+<h2>checkout</h2>
+
+              @if (TempData["cart"] != null)
+              {
+                <table class="table table-responsive"
+                       <thead>
+                           <tr>
+                               <th>ID</th>
+                               <th>Name</th>
+                               <th>Price</th>
+                               <th>Quantity</th>
+                               <th>Bill</th>
+
+                           </tr>
+                       </thead>
+                  <tbody>
+                      @foreach(var item in TempData["cart"] as List<onlinemarketing.Models.cart>)
+                {
+                    <tr>
+                        <td>@item.pro_id </td>
+                        <td> @item.pro_name</td>
+                        <td> @item.pro_price</td>
+                        <td> @item.o_qty</td>
+                        <td>@item.o_bil </td>
+                    </tr>
+                }
+                  </tbody>
+
+                  <tfoot>
+                  <tr>
+                         <td colspan ="4"> </td>
+                        <td>@TempData["total"] </td>
+                  </tr>
+               </tfoot>
+
+            }
+    else
+              {
+                  <h3 style="color:red">Cart is empty</h3>
+                   @Html.ActionLink("Back","Index","User");
+              }

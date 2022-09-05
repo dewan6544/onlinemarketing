@@ -1,0 +1,125 @@
+﻿@model onlinemarketing.Models.tbl_user
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<Doctype>
+    <html>
+    <head>
+        <script>addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}</script>
+        <link href="@Url.Content("/Content/indexpagecss.css")" rel="stylesheet" />
+        <link href="//fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=devanagari,latin-ext"
+              rel="stylesheet">
+
+        <link href="~/Content/AddCat_Style/font-awesome.min.css" rel="stylesheet" />
+        <link href="~/Content/AddCat_Style/style.css" rel="stylesheet" />
+        <link href="~/Content/style.css" rel="stylesheet" />
+    </head>
+
+
+
+    @using (Html.BeginForm("Register", "User", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+
+        <body>
+
+            <div class="main-w3ls">
+                <div class="left-content">
+                    <div class="w3ls-content">
+                        
+                        <h2>Welcome to Online Shopping.</h2>
+                        <a href="#" class="button-w3ls">
+                            <span class="fa fa-long-arrow-right"></span>
+                        </a>
+
+                    </div>
+                    <!-- copyright -->
+                  
+                </div>
+                <div class="right-form-agile">
+                    <!-- content -->
+                    <div class="sub-main-w3">
+                        <h3>User Registeration</h3>
+
+                        
+                            <form action="#" method="post">
+                                <div class="form-style-agile">
+                                    <div class="pom-agile">
+                                        <span class="fa fa-user"></span>
+                                        @Html.TextBoxFor(x => x.u_name, new { @class = "form-control", @placeholder = "User Name" })
+                                    </div>
+                                </div>
+                                <span style="color:red">@Html.ValidationMessageFor(x => x.u_name)</span>
+
+                                <div class="form-style-agile">
+                                    <div class="pom-agile">
+                                        <span class="fa fa-user"></span>
+                                        @Html.PasswordFor(x => x.u_password, new { @class = "form-control", @placeholder = "Password" })
+                                    </div>
+                                </div>
+                                <span style="color:red">@Html.ValidationMessageFor(x => x.u_password)</span>
+
+                                <div class="form-style-agile">
+                                    <div class="pom-agile">
+                                        <span class="fa fa-user"></span>
+                                        @Html.TextBoxFor(x => x.u_contact, new { @class = "form-control", @placeholder = "Contact" })
+                                    </div>
+                                </div>
+                                <span style="color:red">@Html.ValidationMessageFor(x => x.u_contact)</span>
+
+
+                                <div class="form-style-agile">
+                                    <div class="pom-agile">
+                                        <span class="fa fa-user"></span>
+                                        @Html.TextBoxFor(x => x.u_email, new { @class = "form-control", @placeholder = "Email" })
+                                    </div>
+                                </div>
+                                <span style="color:red">@Html.ValidationMessageFor(x => x.u_email)</span>
+
+                                <div class="form-style-agile">
+                                    <div class="pom-agile">
+                                        <span class="fa fa-key"></span>
+                                        <input type="file" name="imgfile" id="imgfile" class="input" required />
+                                    </div>
+                                </div>
+                                <input type="submit" value="Regsiter">
+                            </form>
+                        </div>
+                
+                        <!-- social icons -->
+                        <!-- //social icons -->
+                    </div>
+                </div>
+            
+            <!-- //content -->
+
+        </body>
+    }
+
+</html>
+<script src="~/Scripts/jquery.validate-vsdoc.js"></script>
+<script src="~/Scripts/jquery.validate.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+@section Scripts
+    {
+
+
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+
+
+
+
+

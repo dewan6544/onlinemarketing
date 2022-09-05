@@ -1,0 +1,60 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    background-image: url('img/onlineshop.jpg');
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+    
+}
+
+.main-w3ls {
+    width: 350px;
+    height: 400px;
+    
+    
+    background-size: cover;
+    color: #1b1212;
+    border: 1px solid black;
+    margin: 10% auto 10% auto;
+    padding-left: 60px;
+    padding-right: 60px;
+    border-radius: 10px;
+    background-color: #c9aede;
+    top: 50%;
+    left: 50%;
+}
+
+h2 {
+    margin-top: 10px;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    color: #342c2c;
+}
+
+h3 {
+    margin-top: 5px;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 20px;
+}
+.main-w3ls input[type="submit"] {
+    border: none;
+    outline: none;
+    height: 40px;
+    
+    background: #d11d1d;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+h4 {
+    margin-top: 100px;
+    padding: 0 0 20px;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+}

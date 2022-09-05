@@ -1,0 +1,107 @@
+﻿
+@model onlinemarketing.Models.category
+
+@{
+    ViewBag.Title = "Category";
+}
+
+<!DOCTYPE html>
+
+<Doctype>
+    <html>
+    <head>
+        <script>
+        
+            addEventListener("load", function () {
+                setTimeout(hideURLbar, 0);
+            }, false);
+
+            function hideURLbar() {
+                window.scrollTo(0, 1);
+            }
+            
+        </script>
+
+        <link href="~/Content/bootstrap.css" rel="stylesheet" />
+        <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+        <link href="@Url.Content("/Content/Category.css")" rel="stylesheet" />
+        <link href="//fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=devanagari,latin-ext"
+              rel="stylesheet">
+
+        <link href="~/Content/AddCat_Style/font-awesome.min.css" rel="stylesheet" />
+        <link href="~/Content/AddCat_Style/style.css" rel="stylesheet" />
+        <link href="~/Content/style.css" rel="stylesheet" />
+
+        <script src="js/bootstrap.min.js"></script>
+        <script src="http://code.jquery.com/jquery.js"></script>
+    </head>
+
+
+
+
+
+
+    @using (Html.BeginForm("Category", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+
+        <body>
+            <h4>Add Some New Product Here</h4>
+
+            <div class="main-w3ls">
+                <div class="left-content">
+                    <div class="w3ls-content">
+                        <!-- logo -->
+                        <!-- //logo -->
+                        <h2>Welcome to Admin Dashboard.</h2>
+                        <a href="#" class="button-w3ls">
+                            <span class="fa fa-long-arrow-right"></span>
+                        </a>
+
+                    </div>
+
+                    <!-- content -->
+                    <div class="sub-main-w3">
+                        <h3>Add Category</h3>
+                        <h5>.</h5>
+                        <p></p>
+                        <form action="#" method="post">
+                            <div class="form-style-agile">
+                                <label>Category Name</label>
+                                <div class="pom-agile">
+                                    <span class="fa fa-user"></span>
+                                    @Html.TextBoxFor(x => x.cat_name, new { @class = "form-control", @placeholder = "Category Name" })
+                                </div>
+                            </div>
+                            <span style="color:red">@Html.ValidationMessageFor(x => x.cat_name)</span>
+
+                            <div class="form-style-agile">
+                                <label>Category</label>
+                                <div class="pom-agile">
+                                    <span class="fa fa-key"></span>
+                                    <input type="file" name="imgfile" id="imgfile" class="input" required />
+                                </div>
+                            </div>
+                            <input type="submit" value="Add">
+                        </form>
+                        <!-- social icons -->
+                        <!-- //social icons -->
+                    </div>
+                </div>
+            </div>
+            <!-- //content -->
+
+        </body>
+    }
+
+</html>
+<script src="~/Scripts/jquery.validate-vsdoc.js"></script>
+<script src="~/Scripts/jquery.validate.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+@section Scripts
+    {
+
+
+    @Scripts.Render("~/bundles/jqueryval")
+}
